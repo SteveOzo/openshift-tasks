@@ -81,7 +81,7 @@
           <div class="card-pf">
             <div class="card-pf-heading">
               <h2 class="card-pf-title">
-                Load Generator
+                Load Generator cambiado en dev quiero verlo en ambiente dev
               </h2>
             </div>
             <div class="card-pf-body">

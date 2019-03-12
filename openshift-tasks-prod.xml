@@ -44,11 +44,11 @@ objects:
           imagePullPolicy: Always
           name: openshift-tasks
           ports:
+          - containerPort: 8778
+            protocol: TCP
           - containerPort: 8080
             protocol: TCP
           - containerPort: 8443
-            protocol: TCP
-          - containerPort: 8778
             protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -66,7 +66,8 @@ objects:
         from:
           kind: ImageStreamTag
           name: openshift-tasks:latest
-          namespace: prod
+          namespace: dev
+          lastTriggeredImage: docker-registry.default.svc:5000/dev/openshift-tasks@sha256:3fd7f781ccc5df3d2843f7e0e878a8e5746821fafbeb3d581448a5805d8a2ab3
       type: ImageChange
   status:
     availableReplicas: 0
@@ -96,7 +97,7 @@ objects:
   status:
     ingress:
     - conditions:
-      - lastTransitionTime: 2019-03-12T19:01:46Z
+      - lastTransitionTime: 2019-03-12T21:07:05Z
         status: "True"
         type: Admitted
       host: openshift-tasks-prod.192.168.99.100.nip.io
