@@ -42,7 +42,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-          OpenShift Tasks Demo (Wolfgang's Baseline Version 1.0)
+          OpenShift Tasks Demo (Don senior profesor doctor patricio)
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-collapse-1">
